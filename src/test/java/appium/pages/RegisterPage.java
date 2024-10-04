@@ -33,6 +33,12 @@ public class RegisterPage extends BaseTest {
     By assemenTV = AppiumBy.id("com.android.fitmoveai:id/textView2");
 
     //method
+    public void validateonPage(){
+        wait.until(ExpectedConditions.presenceOfElementLocated(firstName));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lastName));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emailField));
+
+    }
     public void inputFirstname(String first){
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstName)).sendKeys(first);
     }
